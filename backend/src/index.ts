@@ -16,7 +16,7 @@ app.use(clerkMiddleware()); // auth obj will be attached to the req
 app.use(express.json()); // parses JSON request bodies.
 app.use(express.urlencoded({ extended: true })); // parses form data (like HTML forms). 
 
-app.get("/", (req, res) => {
+app.get("/api/health", (req, res) => {
     res.json({
         message: "Welcome to New-Product-Store API - Powered by PostgresSQL, Drizzle ORM & Clerk Auth",
         endpoints: {
